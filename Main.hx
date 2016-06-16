@@ -48,7 +48,7 @@ class Main {
 			var sw:String = id + "=";
 			var argColor:Null<Int> = null;
 			for (arg in args) if (arg.startsWith(sw)) {
-				argColor = Std.parseInt("0x" + arg.substring(3));
+				argColor = Std.parseInt("0x" + arg.substring(sw.length));
 				break;
 			}
 			var color:Int = argColor != null ? argColor : defColor;
